@@ -27,9 +27,7 @@ jobs:
       run: dotnet test src/Extend.NET.sln --no-restore --verbosity normal
 
     - name: Pack
-      run: |
-        dotnet pack src/Extend.NET.File/Extend.NET.File.csproj --configuration Release --no-build --output nupkgs
-        dotnet pack src/Extend.NET.String/Extend.NET.String.csproj --configuration Release --no-build --output nupkgs
+      run: dotnet pack src/Extend.NET.*/Extend.NET.*.csproj --configuration Release --no-build --output nupkgs
 
     - name: Publish to NuGet
       run: |
