@@ -1,0 +1,16 @@
+Here's a description of the existing project to understand the context and how to approach future work with C# best practices:
+
+• Project Overview:
+  - Name: Extend.NET
+  - Purpose: Provide reusable extension methods and helpers for .NET developers
+  - Structure: Multiple sub-projects for different categories (e.g., String, File)
+
+• Project Structure:
+  - src/Directory.Build.props: Common properties for all sub-projects
+  - src/Extend.NET.File: File-related extensions
+  - src/Extend.NET.String: String-related extensions
+  - .github/workflows/publish-nuget.yml: CI/CD pipeline for building and publishing
+
+- Targets all versions of .NET.
+
+

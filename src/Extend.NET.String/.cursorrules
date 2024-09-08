@@ -1,0 +1,4 @@
+Each file should use partial class StringExtensions.
+Each file should have single extension method. 
+Use the `this` keyword for the first parameter to make it an extension method.
+Add XML documentation comments for the method, describing its purpose, parameters, and return value.
