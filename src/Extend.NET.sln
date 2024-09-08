@@ -18,7 +18,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFiles", "SolutionFi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extend.NET.Test", "Extend.NET.Test\Extend.NET.Test.csproj", "{21FF8775-8368-434E-BD88-C24385BC83AB}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{7C51DE0D-5976-49FD-8FAE-78CCCD5428AB}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{7C51DE0D-5976-49FD-8FAE-78CCCD5428AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +45,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{9B818501-F59A-48BA-A19B-5D5A4884472F} = {2C7612AB-BE30-401D-A828-E8A4279115E9}
 		{D0BFAC2A-E5EB-404C-9E2D-9BF3A0E821B7} = {2C7612AB-BE30-401D-A828-E8A4279115E9}
+		{21FF8775-8368-434E-BD88-C24385BC83AB} = {7C51DE0D-5976-49FD-8FAE-78CCCD5428AB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4154E67A-6296-4641-A4E8-1A6738DF369A}

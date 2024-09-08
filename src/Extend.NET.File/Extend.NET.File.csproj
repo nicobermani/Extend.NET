@@ -1,9 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <PackageId>Extend.NET.File</PackageId>
+    <Title>Extend.NET.File</Title>
+    <PackageDescription>File-related extension methods and helpers for .NET</PackageDescription>
+    <RootNamespace>Extend.NET.File</RootNamespace>
   </PropertyGroup>
 
 </Project>

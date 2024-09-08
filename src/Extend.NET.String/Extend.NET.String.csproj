@@ -1,9 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <PackageId>Extend.NET.String</PackageId>
+    <Title>Extend.NET.String</Title>
+    <PackageDescription>String-related extension methods and helpers for .NET</PackageDescription>
+    <RootNamespace>Extend.NET.String</RootNamespace>
   </PropertyGroup>
 
 </Project>
