@@ -18,16 +18,18 @@ jobs:
         dotnet-version: 8.0.x
 
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore src/Extend.NET.sln
 
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build src/Extend.NET.sln --configuration Release --no-restore
 
     - name: Test
-      run: dotnet test --no-restore --verbosity normal
+      run: dotnet test src/Extend.NET.sln --no-restore --verbosity normal
 
     - name: Pack
-      run: dotnet pack --configuration Release --no-build --output nupkgs
+      run: |
+        dotnet pack src/Extend.NET.File/Extend.NET.File.csproj --configuration Release --no-build --output nupkgs
+        dotnet pack src/Extend.NET.String/Extend.NET.String.csproj --configuration Release --no-build --output nupkgs
 
     - name: Publish to NuGet
       run: |
