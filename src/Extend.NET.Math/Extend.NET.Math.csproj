@@ -1,9 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <PackageId>Extend.NET.Math</PackageId>
+    <Title>Extend.NET.Math</Title>
+    <PackageDescription>Math-related extension methods and helpers for .NET</PackageDescription>
+    <RootNamespace>Extend.NET.Math</RootNamespace>
   </PropertyGroup>
 
 </Project>
