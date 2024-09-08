@@ -1,4 +1,4 @@
-using System;
+namespace Extend.NET.DateTime;
 
 public static partial class DateTimeExtensions
 {
@@ -7,7 +7,7 @@ public static partial class DateTimeExtensions
     /// </summary>
     /// <param name="date">The date to convert.</param>
     /// <returns>A short date string representation of the date.</returns>
-    public static string ToShortDateString(this DateTime date)
+    public static string ToShortDateString(this System.DateTime date)
     {
         return date.ToString("yyyy-MM-dd");
     }

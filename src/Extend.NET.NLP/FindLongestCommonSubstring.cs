@@ -1,4 +1,4 @@
-using System;
+namespace Extend.NET.NLP;
 
 public static partial class NlpExtensions
 {

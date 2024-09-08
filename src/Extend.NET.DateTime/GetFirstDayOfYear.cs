@@ -1,4 +1,4 @@
-using System;
+namespace Extend.NET.DateTime;
 
 public static partial class DateTimeExtensions
 {
@@ -7,8 +7,8 @@ public static partial class DateTimeExtensions
     /// </summary>
     /// <param name="date">The date to get the first day of the year for.</param>
     /// <returns>A new DateTime representing the first day of the year.</returns>
-    public static DateTime GetFirstDayOfYear(this DateTime date)
+    public static System.DateTime GetFirstDayOfYear(this System.DateTime date)
     {
-        return new DateTime(date.Year, 1, 1);
+        return new System.DateTime(date.Year, 1, 1);
     }
 }

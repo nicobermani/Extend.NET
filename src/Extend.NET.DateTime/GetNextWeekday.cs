@@ -1,4 +1,4 @@
-using System;
+namespace Extend.NET.DateTime;
 
 public static partial class DateTimeExtensions
 {
@@ -7,7 +7,7 @@ public static partial class DateTimeExtensions
     /// </summary>
     /// <param name="date">The starting date.</param>
     /// <returns>A new DateTime representing the next weekday.</returns>
-    public static DateTime GetNextWeekday(this DateTime date)
+    public static System.DateTime GetNextWeekday(this System.DateTime date)
     {
         do
         {

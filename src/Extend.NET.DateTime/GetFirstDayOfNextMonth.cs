@@ -1,4 +1,4 @@
-using System;
+namespace Extend.NET.DateTime;
 
 public static partial class DateTimeExtensions
 {
@@ -7,8 +7,8 @@ public static partial class DateTimeExtensions
     /// </summary>
     /// <param name="date">The starting date.</param>
     /// <returns>A new DateTime representing the first day of the next month.</returns>
-    public static DateTime GetFirstDayOfNextMonth(this DateTime date)
+    public static System.DateTime GetFirstDayOfNextMonth(this System.DateTime date)
     {
-        return new DateTime(date.Year, date.Month, 1).AddMonths(1);
+        return new System.DateTime(date.Year, date.Month, 1).AddMonths(1);
     }
 }

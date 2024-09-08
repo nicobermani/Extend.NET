@@ -1,6 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
+namespace Extend.NET.NLP;
 
 public static partial class NlpExtensions
 {

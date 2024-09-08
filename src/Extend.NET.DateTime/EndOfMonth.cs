@@ -1,4 +1,4 @@
-using System;
+namespace Extend.NET.DateTime;
 
 public static partial class DateTimeExtensions
 {
@@ -7,8 +7,8 @@ public static partial class DateTimeExtensions
     /// </summary>
     /// <param name="date">The date to get the end of the month for.</param>
     /// <returns>A new DateTime representing the last day of the month.</returns>
-    public static DateTime EndOfMonth(this DateTime date)
+    public static System.DateTime EndOfMonth(this System.DateTime date)
     {
-        return new DateTime(date.Year, date.Month, DateTime.DaysInMonth(date.Year, date.Month));
+        return new System.DateTime(date.Year, date.Month, System.DateTime.DaysInMonth(date.Year, date.Month));
     }
 }

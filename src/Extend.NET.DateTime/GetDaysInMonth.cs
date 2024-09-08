@@ -1,4 +1,4 @@
-using System;
+namespace Extend.NET.DateTime;
 
 public static partial class DateTimeExtensions
 {
@@ -7,8 +7,8 @@ public static partial class DateTimeExtensions
     /// </summary>
     /// <param name="date">The date to get the number of days in the month for.</param>
     /// <returns>The number of days in the month.</returns>
-    public static int GetDaysInMonth(this DateTime date)
+    public static int GetDaysInMonth(this System.DateTime date)
     {
-        return DateTime.DaysInMonth(date.Year, date.Month);
+        return System.DateTime.DaysInMonth(date.Year, date.Month);
     }
 }

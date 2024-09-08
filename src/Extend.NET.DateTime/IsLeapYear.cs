@@ -1,4 +1,4 @@
-using System;
+namespace Extend.NET.DateTime;
 
 public static partial class DateTimeExtensions
 {
@@ -7,8 +7,8 @@ public static partial class DateTimeExtensions
     /// </summary>
     /// <param name="date">The date to check.</param>
     /// <returns>True if the year is a leap year; otherwise, false.</returns>
-    public static bool IsLeapYear(this DateTime date)
+    public static bool IsLeapYear(this System.DateTime date)
     {
-        return DateTime.IsLeapYear(date.Year);
+        return System.DateTime.IsLeapYear(date.Year);
     }
 }

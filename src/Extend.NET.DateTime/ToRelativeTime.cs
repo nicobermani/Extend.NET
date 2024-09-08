@@ -1,4 +1,4 @@
-using System;
+namespace Extend.NET.DateTime;
 
 public static partial class DateTimeExtensions
 {
@@ -7,9 +7,9 @@ public static partial class DateTimeExtensions
     /// </summary>
     /// <param name="date">The date to convert.</param>
     /// <returns>A string representing the relative time.</returns>
-    public static string ToRelativeTime(this DateTime date)
+    public static string ToRelativeTime(this System.DateTime date)
     {
-        var now = DateTime.Now;
+        var now = System.DateTime.Now;
         var diff = now - date;
 
         if (diff.TotalDays > 365)

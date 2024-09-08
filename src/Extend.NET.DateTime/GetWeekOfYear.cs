@@ -1,5 +1,6 @@
-using System;
 using System.Globalization;
+
+namespace Extend.NET.DateTime;
 
 public static partial class DateTimeExtensions
 {
@@ -8,7 +9,7 @@ public static partial class DateTimeExtensions
     /// </summary>
     /// <param name="date">The date to get the week of the year for.</param>
     /// <returns>The week of the year (1-53).</returns>
-    public static int GetWeekOfYear(this DateTime date)
+    public static int GetWeekOfYear(this System.DateTime date)
     {
         return CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(
             date,

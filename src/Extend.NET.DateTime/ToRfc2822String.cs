@@ -1,4 +1,4 @@
-using System;
+namespace Extend.NET.DateTime;
 
 public static partial class DateTimeExtensions
 {
@@ -7,7 +7,7 @@ public static partial class DateTimeExtensions
     /// </summary>
     /// <param name="date">The date to convert.</param>
     /// <returns>An RFC 2822 formatted string representation of the date.</returns>
-    public static string ToRfc2822String(this DateTime date)
+    public static string ToRfc2822String(this System.DateTime date)
     {
         return date.ToString("ddd, dd MMM yyyy HH:mm:ss zzz");
     }

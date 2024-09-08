@@ -1,6 +1,6 @@
-using System;
-using System.IO;
 using System.Security.Cryptography;
+
+namespace Extend.NET.File;
 
 public static partial class FileExtensions
 {

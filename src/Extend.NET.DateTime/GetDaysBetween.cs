@@ -1,4 +1,4 @@
-using System;
+namespace Extend.NET.DateTime;
 
 public static partial class DateTimeExtensions
 {
@@ -8,7 +8,7 @@ public static partial class DateTimeExtensions
     /// <param name="startDate">The start date.</param>
     /// <param name="endDate">The end date.</param>
     /// <returns>The number of days between the two dates.</returns>
-    public static int GetDaysBetween(this DateTime startDate, DateTime endDate)
+    public static int GetDaysBetween(this System.DateTime startDate, System.DateTime endDate)
     {
         return (int)(endDate.Date - startDate.Date).TotalDays;
     }

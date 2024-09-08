@@ -1,5 +1,6 @@
-using System;
 using System.Globalization;
+
+namespace Extend.NET.NLP;
 
 public static partial class NlpExtensions
 {

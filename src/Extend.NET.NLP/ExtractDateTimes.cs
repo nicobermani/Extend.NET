@@ -1,7 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Globalization;
 using System.Text.RegularExpressions;
+
+namespace Extend.NET.NLP;
 
 public static partial class NlpExtensions
 {
@@ -23,12 +22,9 @@ public static partial class NlpExtensions
 
         var combinedPattern = string.Join("|", dateTimePatterns);
         var matches = Regex.Matches(text, combinedPattern);
-        
+
         var dateTimes = new List<string>();
-        foreach (Match match in matches)
-        {
-            dateTimes.Add(match.Value);
-        }
+        foreach (Match match in matches) dateTimes.Add(match.Value);
 
         return dateTimes;
     }

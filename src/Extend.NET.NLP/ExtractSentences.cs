@@ -1,6 +1,6 @@
-using System;
-using System.Collections.Generic;
 using System.Text.RegularExpressions;
+
+namespace Extend.NET.NLP;
 
 public static partial class NlpExtensions
 {
@@ -13,8 +13,8 @@ public static partial class NlpExtensions
     {
         var sentencePattern = @"(?<=[.!?])\s+(?=[A-Z])";
         var sentences = Regex.Split(text.Trim(), sentencePattern)
-                             .Where(s => !string.IsNullOrWhiteSpace(s))
-                             .ToList();
+            .Where(s => !string.IsNullOrWhiteSpace(s))
+            .ToList();
 
         return sentences;
     }

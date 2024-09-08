@@ -1,5 +1,4 @@
-using System;
-using System.IO;
+namespace Extend.NET.File;
 
 public static partial class FileExtensions
 {
@@ -10,7 +9,7 @@ public static partial class FileExtensions
     /// <returns>The file content as a Base64 encoded string.</returns>
     public static string GetFileContentAsBase64(this FileInfo file)
     {
-        byte[] fileBytes = File.ReadAllBytes(file.FullName);
+        byte[] fileBytes = System.IO.File.ReadAllBytes(file.FullName);
         return Convert.ToBase64String(fileBytes);
     }
 }

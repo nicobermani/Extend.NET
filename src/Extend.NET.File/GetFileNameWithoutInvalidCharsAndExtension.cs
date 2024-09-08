@@ -1,5 +1,6 @@
-using System.IO;
 using System.Text.RegularExpressions;
+
+namespace Extend.NET.File;
 
 public static partial class FileExtensions
 {

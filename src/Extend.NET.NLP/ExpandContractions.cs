@@ -1,6 +1,6 @@
-using System;
-using System.Collections.Generic;
 using System.Text.RegularExpressions;
+
+namespace Extend.NET.NLP;
 
 public static partial class NlpExtensions
 {

@@ -1,4 +1,4 @@
-using System;
+namespace Extend.NET.DateTime;
 
 public static partial class DateTimeExtensions
 {
@@ -7,7 +7,7 @@ public static partial class DateTimeExtensions
     /// </summary>
     /// <param name="date">The starting date.</param>
     /// <returns>The next workday after the given date.</returns>
-    public static DateTime GetNextWorkday(this DateTime date)
+    public static System.DateTime GetNextWorkday(this System.DateTime date)
     {
         do
         {

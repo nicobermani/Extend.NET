@@ -1,4 +1,4 @@
-using System;
+namespace Extend.NET.DateTime;
 
 public static partial class DateTimeExtensions
 {
@@ -7,7 +7,7 @@ public static partial class DateTimeExtensions
     /// </summary>
     /// <param name="date">The date to convert.</param>
     /// <returns>An ISO 8601 formatted string representation of the date.</returns>
-    public static string ToIso8601String(this DateTime date)
+    public static string ToIso8601String(this System.DateTime date)
     {
         return date.ToString("yyyy-MM-ddTHH:mm:ss.fffZ");
     }

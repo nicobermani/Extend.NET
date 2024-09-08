@@ -1,5 +1,4 @@
-using System.IO;
-using System.IO.Compression;
+namespace Extend.NET.File;
 
 public static partial class FileExtensions
 {

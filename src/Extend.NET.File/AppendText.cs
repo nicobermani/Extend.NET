@@ -1,4 +1,4 @@
-using System.IO;
+namespace Extend.NET.File;
 
 public static partial class FileExtensions
 {
@@ -9,6 +9,6 @@ public static partial class FileExtensions
     /// <param name="text">The text to append.</param>
     public static void AppendText(this FileInfo file, string text)
     {
-        File.AppendAllText(file.FullName, text);
+        System.IO.File.AppendAllText(file.FullName, text);
     }
 }

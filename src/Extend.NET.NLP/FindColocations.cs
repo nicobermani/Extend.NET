@@ -1,6 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
+namespace Extend.NET.NLP;
 
 public static partial class NlpExtensions
 {
@@ -25,6 +23,6 @@ public static partial class NlpExtensions
         }
 
         return colocations.Where(kvp => kvp.Value >= minFrequency)
-                          .ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
+            .ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
     }
 }

@@ -1,4 +1,4 @@
-using System;
+namespace Extend.NET.DateTime;
 
 public static partial class DateTimeExtensions
 {
@@ -7,8 +7,8 @@ public static partial class DateTimeExtensions
     /// </summary>
     /// <param name="startDate">The starting date.</param>
     /// <returns>A TimeSpan representing the elapsed time.</returns>
-    public static TimeSpan GetElapsedTime(this DateTime startDate)
+    public static TimeSpan GetElapsedTime(this System.DateTime startDate)
     {
-        return DateTime.Now - startDate;
+        return System.DateTime.Now - startDate;
     }
 }

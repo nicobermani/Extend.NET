@@ -1,5 +1,6 @@
-using System;
 using System.Globalization;
+
+namespace Extend.NET.DateTime;
 
 public static partial class DateTimeExtensions
 {
@@ -8,7 +9,7 @@ public static partial class DateTimeExtensions
     /// </summary>
     /// <param name="date">The date to get the month name for.</param>
     /// <returns>The full name of the month.</returns>
-    public static string GetMonthName(this DateTime date)
+    public static string GetMonthName(this System.DateTime date)
     {
         return date.ToString("MMMM", CultureInfo.CurrentCulture);
     }

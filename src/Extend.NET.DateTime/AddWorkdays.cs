@@ -1,4 +1,4 @@
-using System;
+namespace Extend.NET.DateTime;
 
 public static partial class DateTimeExtensions
 {
@@ -8,7 +8,7 @@ public static partial class DateTimeExtensions
     /// <param name="date">The starting date.</param>
     /// <param name="days">The number of workdays to add.</param>
     /// <returns>A new DateTime that is the specified number of workdays after the input date.</returns>
-    public static DateTime AddWorkdays(this DateTime date, int days)
+    public static System.DateTime AddWorkdays(this System.DateTime date, int days)
     {
         while (days > 0)
         {

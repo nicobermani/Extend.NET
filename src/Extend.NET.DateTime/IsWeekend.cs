@@ -1,4 +1,4 @@
-using System;
+namespace Extend.NET.DateTime;
 
 public static partial class DateTimeExtensions
 {
@@ -7,7 +7,7 @@ public static partial class DateTimeExtensions
     /// </summary>
     /// <param name="date">The date to check.</param>
     /// <returns>True if the date is a Saturday or Sunday; otherwise, false.</returns>
-    public static bool IsWeekend(this DateTime date)
+    public static bool IsWeekend(this System.DateTime date)
     {
         return date.DayOfWeek == DayOfWeek.Saturday || date.DayOfWeek == DayOfWeek.Sunday;
     }

@@ -1,5 +1,4 @@
-using System.IO;
-using System.Linq;
+namespace Extend.NET.File;
 
 public static partial class FileExtensions
 {
