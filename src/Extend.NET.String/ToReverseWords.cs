@@ -3,18 +3,16 @@ namespace Extend.NET.String
     public static partial class StringExtensions
     {
         /// <summary>
-        /// Reverses the order of words in the string while maintaining the order of characters within each word.
+        /// Reverses the order of words in the string.
         /// </summary>
-        /// <param name="this">The string to reverse words in.</param>
-        /// <returns>A string with the words in reverse order.</returns>
+        /// <param name="this">The string to process.</param>
+        /// <returns>A new string with the words in reverse order.</returns>
         public static string ToReverseWords(this string @this)
         {
-            if (string.IsNullOrEmpty(@this))
+            if (string.IsNullOrWhiteSpace(@this))
                 return @this;
 
-            string[] words = @this.Split(' ');
-            Array.Reverse(words);
-            return string.Join(" ", words);
+            return string.Join(" ", @this.Split(' ').Reverse());
         }
     }
 }
