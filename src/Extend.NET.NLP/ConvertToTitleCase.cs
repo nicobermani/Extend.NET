@@ -1,0 +1,16 @@
+using System;
+using System.Globalization;
+
+public static partial class NlpExtensions
+{
+    /// <summary>
+    /// Converts the input text to title case.
+    /// </summary>
+    /// <param name="text">The input text to convert.</param>
+    /// <returns>The input text converted to title case.</returns>
+    public static string ConvertToTitleCase(this string text)
+    {
+        TextInfo textInfo = new CultureInfo("en-US", false).TextInfo;
+        return textInfo.ToTitleCase(text.ToLower());
+    }
+}

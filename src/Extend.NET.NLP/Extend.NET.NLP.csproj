@@ -1,9 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <PackageId>Extend.NET.NLP</PackageId>
+    <Title>Extend.NET.NLP</Title>
+    <PackageDescription>NLP-related extension methods and helpers for .NET</PackageDescription>
+    <RootNamespace>Extend.NET.NLP</RootNamespace>
   </PropertyGroup>
 
 </Project>
