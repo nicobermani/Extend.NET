@@ -14,7 +14,7 @@ namespace Extend.NET.String
             if (@this.Length <= maxLength)
                 return @this;
 
-            int truncatedLength = maxLength - ellipsis.Length;
+            var truncatedLength = maxLength - ellipsis.Length;
             return @this.Substring(0, truncatedLength) + ellipsis;
         }
     }

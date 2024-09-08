@@ -14,12 +14,12 @@ public static partial class NlpExtensions
 
         word = word.Replace("es", "").Replace("ed", "");
         var vowels = new[] { 'a', 'e', 'i', 'o', 'u', 'y' };
-        int count = 0;
-        bool lastWasVowel = false;
+        var count = 0;
+        var lastWasVowel = false;
 
-        foreach (char c in word)
+        foreach (var c in word)
         {
-            bool isVowel = vowels.Contains(c);
+            var isVowel = vowels.Contains(c);
             if (isVowel && !lastWasVowel) count++;
             lastWasVowel = isVowel;
         }

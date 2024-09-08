@@ -9,7 +9,7 @@ public static partial class FileExtensions
     /// <returns>True if the file name is valid, false otherwise.</returns>
     public static bool IsValidFileName(this string fileName)
     {
-        char[] invalidChars = Path.GetInvalidFileNameChars();
+        var invalidChars = Path.GetInvalidFileNameChars();
         return !string.IsNullOrEmpty(fileName) && 
                fileName.IndexOfAny(invalidChars) == -1 && 
                !fileName.Any(ch => ch < 32);

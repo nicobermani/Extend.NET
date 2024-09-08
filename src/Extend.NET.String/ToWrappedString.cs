@@ -15,10 +15,10 @@ namespace Extend.NET.String
             if (string.IsNullOrEmpty(@this) || width <= 0)
                 return @this;
 
-            StringBuilder sb = new StringBuilder();
-            int currentLinePosition = 0;
+            var sb = new StringBuilder();
+            var currentLinePosition = 0;
 
-            foreach (string word in @this.Split(' '))
+            foreach (var word in @this.Split(' '))
             {
                 if (currentLinePosition + word.Length > width)
                 {

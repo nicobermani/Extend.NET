@@ -11,7 +11,7 @@ public static partial class FileExtensions
     {
         try
         {
-            using (FileStream stream = file.Open(FileMode.Open, FileAccess.Read, FileShare.None))
+            using (var stream = file.Open(FileMode.Open, FileAccess.Read, FileShare.None))
             {
                 stream.Close();
             }

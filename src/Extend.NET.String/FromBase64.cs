@@ -11,7 +11,7 @@ namespace Extend.NET.String
         /// <returns>The original string decoded from Base64.</returns>
         public static string FromBase64(this string @this)
         {
-            byte[] bytes = Convert.FromBase64String(@this);
+            var bytes = Convert.FromBase64String(@this);
             return Encoding.UTF8.GetString(bytes);
         }
     }

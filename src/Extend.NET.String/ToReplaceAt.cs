@@ -14,7 +14,7 @@ namespace Extend.NET.String
             if (index < 0 || index >= @this.Length)
                 throw new ArgumentOutOfRangeException(nameof(index));
 
-            char[] chars = @this.ToCharArray();
+            var chars = @this.ToCharArray();
             chars[index] = newChar;
             return new string(chars);
         }

@@ -11,8 +11,8 @@ public static partial class FileExtensions
     /// <returns>The file name without invalid characters in uppercase.</returns>
     public static string GetFileNameWithoutInvalidCharsUpperCase(this FileInfo file)
     {
-        string invalidChars = Regex.Escape(new string(Path.GetInvalidFileNameChars()));
-        string invalidRegStr = string.Format(@"([{0}]*\.+$)|([{0}]+)", invalidChars);
+        var invalidChars = Regex.Escape(new string(Path.GetInvalidFileNameChars()));
+        var invalidRegStr = string.Format(@"([{0}]*\.+$)|([{0}]+)", invalidChars);
         return Regex.Replace(file.Name, invalidRegStr, "_").ToUpper();
     }
 }

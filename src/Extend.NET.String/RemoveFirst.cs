@@ -10,7 +10,7 @@ namespace Extend.NET.String
         /// <returns>A new string with the first occurrence of the specified string removed.</returns>
         public static string RemoveFirst(this string @this, string removeString)
         {
-            int index = @this.IndexOf(removeString);
+            var index = @this.IndexOf(removeString);
             return index < 0 ? @this : @this.Remove(index, removeString.Length);
         }
     }

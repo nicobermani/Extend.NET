@@ -11,7 +11,7 @@ namespace Extend.NET.String
         {
             return new string(@this.Select(c => {
                 if (!char.IsLetter(c)) return c;
-                char offset = char.IsUpper(c) ? 'A' : 'a';
+                var offset = char.IsUpper(c) ? 'A' : 'a';
                 return (char)((((c + 13) - offset) % 26) + offset);
             }).ToArray());
         }

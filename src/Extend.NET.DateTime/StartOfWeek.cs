@@ -10,7 +10,7 @@ public static partial class DateTimeExtensions
     /// <returns>A new DateTime representing the first day of the week.</returns>
     public static System.DateTime StartOfWeek(this System.DateTime date, DayOfWeek startOfWeek = DayOfWeek.Sunday)
     {
-        int diff = (7 + (date.DayOfWeek - startOfWeek)) % 7;
+        var diff = (7 + (date.DayOfWeek - startOfWeek)) % 7;
         return date.AddDays(-1 * diff).Date;
     }
 }

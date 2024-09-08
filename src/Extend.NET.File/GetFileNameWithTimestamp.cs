@@ -9,7 +9,7 @@ public static partial class FileExtensions
     /// <returns>The file name with a timestamp appended.</returns>
     public static string GetFileNameWithTimestamp(this FileInfo file)
     {
-        string timestamp = DateTime.Now.ToString("yyyyMMddHHmmss");
+        var timestamp = DateTime.Now.ToString("yyyyMMddHHmmss");
         return $"{Path.GetFileNameWithoutExtension(file.Name)}_{timestamp}{file.Extension}";
     }
 }

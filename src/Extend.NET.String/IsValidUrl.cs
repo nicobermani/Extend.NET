@@ -11,7 +11,7 @@ namespace Extend.NET.String
         /// <returns>True if the string is a valid URL; otherwise, false.</returns>
         public static bool IsValidUrl(this string @this)
         {
-            string pattern = @"^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$";
+            var pattern = @"^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$";
             return Regex.IsMatch(@this, pattern, RegexOptions.IgnoreCase);
         }
     }

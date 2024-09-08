@@ -12,10 +12,10 @@ namespace Extend.NET.String
         /// <returns>The decompressed string.</returns>
         public static string FromCompressed(this string @this)
         {
-            byte[] gZipBuffer = Convert.FromBase64String(@this);
+            var gZipBuffer = Convert.FromBase64String(@this);
             using (var memoryStream = new MemoryStream())
             {
-                int dataLength = BitConverter.ToInt32(gZipBuffer, 0);
+                var dataLength = BitConverter.ToInt32(gZipBuffer, 0);
                 memoryStream.Write(gZipBuffer, 4, gZipBuffer.Length - 4);
 
                 var buffer = new byte[dataLength];

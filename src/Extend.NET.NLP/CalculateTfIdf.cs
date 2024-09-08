@@ -11,8 +11,11 @@ public static partial class NlpExtensions
     /// <returns>The TF-IDF score for the term in the document.</returns>
     public static double CalculateTfIdf(this string term, string document, IEnumerable<string> allDocuments)
     {
-        double tf = document.Split().Count(w => w.Equals(term, StringComparison.OrdinalIgnoreCase)) / (double)document.Split().Length;
-        double idf = Math.Log(allDocuments.Count() / (double)(1 + allDocuments.Count(doc => doc.Contains(term, StringComparison.OrdinalIgnoreCase))));
+        var tf = document.Split().Count(w => w.Equals(term, StringComparison.OrdinalIgnoreCase)) /
+                 (double) document.Split().Length;
+        var idf = Math.Log(allDocuments.Count() /
+                           (double) (1 + allDocuments.Count(doc =>
+                               doc.Contains(term, StringComparison.OrdinalIgnoreCase))));
         return tf * idf;
     }
 }

@@ -11,7 +11,7 @@ public static partial class FileExtensions
     /// <returns>The file version as a string, or null if version information is not available.</returns>
     public static string GetFileVersion(this FileInfo file)
     {
-        FileVersionInfo versionInfo = FileVersionInfo.GetVersionInfo(file.FullName);
+        var versionInfo = FileVersionInfo.GetVersionInfo(file.FullName);
         return versionInfo.FileVersion;
     }
 }

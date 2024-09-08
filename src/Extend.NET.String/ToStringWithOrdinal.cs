@@ -9,10 +9,10 @@ namespace Extend.NET.String
         /// <returns>The string with an ordinal suffix.</returns>
         public static string ToStringWithOrdinal(this string @this)
         {
-            if (!int.TryParse(@this, out int number))
+            if (!int.TryParse(@this, out var number))
                 return @this;
 
-            string suffix = (number % 100) switch
+            var suffix = (number % 100) switch
             {
                 11 or 12 or 13 => "th",
                 _ => (number % 10) switch

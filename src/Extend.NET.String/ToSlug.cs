@@ -11,7 +11,7 @@ namespace Extend.NET.String
         /// <returns>A URL-friendly slug.</returns>
         public static string ToSlug(this string @this)
         {
-            string str = @this.RemoveAccents().ToLower();
+            var str = @this.RemoveAccents().ToLower();
             str = Regex.Replace(str, @"[^a-z0-9\s-]", "");
             str = Regex.Replace(str, @"\s+", " ").Trim();
             str = str.Substring(0, str.Length <= 45 ? str.Length : 45).Trim();

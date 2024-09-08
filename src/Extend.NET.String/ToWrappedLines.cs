@@ -14,12 +14,12 @@ namespace Extend.NET.String
                 return new string[] { @this };
 
             List<string> lines = new List<string>();
-            int currentPosition = 0;
+            var currentPosition = 0;
 
             while (currentPosition < @this.Length)
             {
-                int remainingLength = Math.Min(lineLength, @this.Length - currentPosition);
-                int breakPosition = @this.LastIndexOf(' ', currentPosition + remainingLength - 1, remainingLength);
+                var remainingLength = Math.Min(lineLength, @this.Length - currentPosition);
+                var breakPosition = @this.LastIndexOf(' ', currentPosition + remainingLength - 1, remainingLength);
 
                 if (breakPosition == -1 || breakPosition <= currentPosition)
                     breakPosition = currentPosition + remainingLength;

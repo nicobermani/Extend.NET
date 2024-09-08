@@ -11,9 +11,9 @@ public static partial class FileExtensions
     /// <returns>The file name without extension and invalid characters.</returns>
     public static string GetFileNameWithoutExtensionAndInvalidChars(this FileInfo file)
     {
-        string fileName = Path.GetFileNameWithoutExtension(file.Name);
-        string invalidChars = Regex.Escape(new string(Path.GetInvalidFileNameChars()));
-        string invalidRegStr = string.Format(@"([{0}]*\.+$)|([{0}]+)", invalidChars);
+        var fileName = Path.GetFileNameWithoutExtension(file.Name);
+        var invalidChars = Regex.Escape(new string(Path.GetInvalidFileNameChars()));
+        var invalidRegStr = string.Format(@"([{0}]*\.+$)|([{0}]+)", invalidChars);
         return Regex.Replace(fileName, invalidRegStr, "_");
     }
 }

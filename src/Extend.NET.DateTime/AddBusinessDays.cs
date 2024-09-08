@@ -14,11 +14,11 @@ public static partial class DateTimeExtensions
 
         if (days > 0)
         {
-            int weeks = days / 5;
-            int remainingDays = days % 5;
+            var weeks = days / 5;
+            var remainingDays = days % 5;
             date = date.AddDays(weeks * 7);
 
-            for (int i = 0; i < remainingDays; i++)
+            for (var i = 0; i < remainingDays; i++)
             {
                 date = date.AddDays(1);
                 if (date.DayOfWeek == DayOfWeek.Saturday || date.DayOfWeek == DayOfWeek.Sunday)
@@ -27,11 +27,11 @@ public static partial class DateTimeExtensions
         }
         else
         {
-            int weeks = Math.Abs(days) / 5;
-            int remainingDays = Math.Abs(days) % 5;
+            var weeks = Math.Abs(days) / 5;
+            var remainingDays = Math.Abs(days) % 5;
             date = date.AddDays(weeks * -7);
 
-            for (int i = 0; i < remainingDays; i++)
+            for (var i = 0; i < remainingDays; i++)
             {
                 date = date.AddDays(-1);
                 if (date.DayOfWeek == DayOfWeek.Saturday || date.DayOfWeek == DayOfWeek.Sunday)

@@ -14,8 +14,8 @@ namespace Extend.NET.String
             if (string.IsNullOrEmpty(@this) || string.IsNullOrEmpty(substring))
                 return 0;
 
-            int count = 0;
-            int position = 0;
+            var count = 0;
+            var position = 0;
             while ((position = @this.IndexOf(substring, position, stringComparison)) != -1)
             {
                 count++;

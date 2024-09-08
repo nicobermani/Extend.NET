@@ -9,7 +9,7 @@ namespace Extend.NET.String
         /// <returns>The ordinal representation of the number.</returns>
         public static string ToOrdinal(this string @this)
         {
-            if (!int.TryParse(@this, out int number))
+            if (!int.TryParse(@this, out var number))
                 return @this;
 
             if (number <= 0) return @this;

@@ -14,7 +14,7 @@ public static partial class FileExtensions
         using (var sha256 = SHA256.Create())
         using (var stream = file.OpenRead())
         {
-            byte[] hash = sha256.ComputeHash(stream);
+            var hash = sha256.ComputeHash(stream);
             return BitConverter.ToString(hash).Replace("-", "").ToLowerInvariant();
         }
     }

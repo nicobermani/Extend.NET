@@ -10,7 +10,7 @@ public static partial class FileExtensions
     /// <returns>A new FileInfo object that represents the renamed file.</returns>
     public static FileInfo Rename(this FileInfo file, string newName)
     {
-        string newPath = Path.Combine(file.DirectoryName, newName);
+        var newPath = Path.Combine(file.DirectoryName, newName);
         file.MoveTo(newPath);
         return new FileInfo(newPath);
     }

@@ -11,7 +11,7 @@ namespace Extend.NET.String
         /// <returns>True if the string is a palindrome; otherwise, false.</returns>
         public static bool ToIsPalindrome(this string @this)
         {
-            string cleaned = new string(@this.Where(char.IsLetterOrDigit).ToArray()).ToLower();
+            var cleaned = new string(@this.Where(char.IsLetterOrDigit).ToArray()).ToLower();
             return cleaned.SequenceEqual(cleaned.Reverse());
         }
     }

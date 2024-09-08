@@ -13,13 +13,10 @@ public static partial class NlpExtensions
         if (n <= 0)
             throw new ArgumentException("N must be a positive integer.", nameof(n));
 
-        var words = text.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+        var words = text.Split(new[] {' '}, StringSplitOptions.RemoveEmptyEntries);
         var nGrams = new List<string>();
 
-        for (int i = 0; i <= words.Length - n; i++)
-        {
-            nGrams.Add(string.Join(" ", words.Skip(i).Take(n)));
-        }
+        for (var i = 0; i <= words.Length - n; i++) nGrams.Add(string.Join(" ", words.Skip(i).Take(n)));
 
         return nGrams;
     }

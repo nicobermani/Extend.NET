@@ -9,7 +9,7 @@ public static partial class FileExtensions
     /// <returns>True if the file name is in PascalCase, false otherwise.</returns>
     public static bool IsFileNamePascalCase(this FileInfo file)
     {
-        string fileName = Path.GetFileNameWithoutExtension(file.Name);
+        var fileName = Path.GetFileNameWithoutExtension(file.Name);
         return char.IsUpper(fileName[0]) && fileName.Skip(1).Any(char.IsLower);
     }
 }

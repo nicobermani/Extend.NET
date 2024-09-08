@@ -12,8 +12,8 @@ namespace Extend.NET.String
         /// <returns>A string that can be safely used as a file name.</returns>
         public static string ToSafeFileName(this string @this, string replacement = "_")
         {
-            string invalid = new string(Path.GetInvalidFileNameChars()) + new string(Path.GetInvalidPathChars());
-            Regex regex = new Regex($"[{Regex.Escape(invalid)}]");
+            var invalid = new string(Path.GetInvalidFileNameChars()) + new string(Path.GetInvalidPathChars());
+            var regex = new Regex($"[{Regex.Escape(invalid)}]");
             return regex.Replace(@this, replacement);
         }
     }

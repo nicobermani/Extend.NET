@@ -9,15 +9,16 @@ public static partial class FileExtensions
     /// <returns>A formatted string representing the file size.</returns>
     public static string GetFileSizeFormatted(this FileInfo file)
     {
-        long bytes = file.Length;
-        string[] suffixes = { "B", "KB", "MB", "GB", "TB", "PB" };
-        int counter = 0;
-        decimal number = (decimal)bytes;
+        var bytes = file.Length;
+        string[] suffixes = {"B", "KB", "MB", "GB", "TB", "PB"};
+        var counter = 0;
+        var number = (decimal) bytes;
         while (Math.Round(number / 1024) >= 1)
         {
             number /= 1024;
             counter++;
         }
+
         return string.Format("{0:n1} {1}", number, suffixes[counter]);
     }
 }

@@ -13,8 +13,8 @@ public static partial class NlpExtensions
         var negativeWords = new HashSet<string> { "bad", "terrible", "awful", "sad", "negative" };
 
         var words = text.ToLower().Split();
-        int positiveCount = words.Count(w => positiveWords.Contains(w));
-        int negativeCount = words.Count(w => negativeWords.Contains(w));
+        var positiveCount = words.Count(w => positiveWords.Contains(w));
+        var negativeCount = words.Count(w => negativeWords.Contains(w));
 
         return (positiveCount - negativeCount) / (double)words.Length;
     }

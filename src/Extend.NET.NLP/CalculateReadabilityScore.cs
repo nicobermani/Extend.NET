@@ -9,12 +9,12 @@ public static partial class NlpExtensions
     /// <returns>The Flesch-Kincaid Grade Level score.</returns>
     public static double CalculateReadabilityScore(this string text)
     {
-        var sentences = text.Split(new[] { '.', '!', '?' }, StringSplitOptions.RemoveEmptyEntries);
-        var words = text.Split(new[] { ' ', '\t', '\n' }, StringSplitOptions.RemoveEmptyEntries);
-        
+        var sentences = text.Split(new[] {'.', '!', '?'}, StringSplitOptions.RemoveEmptyEntries);
+        var words = text.Split(new[] {' ', '\t', '\n'}, StringSplitOptions.RemoveEmptyEntries);
+
         double totalSyllables = words.Sum(w => w.CountSyllables());
-        double avgSentenceLength = (double)words.Length / sentences.Length;
-        double avgSyllablesPerWord = totalSyllables / words.Length;
+        var avgSentenceLength = (double) words.Length / sentences.Length;
+        var avgSyllablesPerWord = totalSyllables / words.Length;
 
         return 0.39 * avgSentenceLength + 11.8 * avgSyllablesPerWord - 15.59;
     }

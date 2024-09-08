@@ -11,7 +11,7 @@ public static partial class FileExtensions
     /// <returns>The file name without numbers and extension.</returns>
     public static string GetFileNameWithoutNumbers(this FileInfo file)
     {
-        string fileName = Path.GetFileNameWithoutExtension(file.Name);
+        var fileName = Path.GetFileNameWithoutExtension(file.Name);
         return Regex.Replace(fileName, @"\d", "");
     }
 }

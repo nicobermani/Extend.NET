@@ -9,7 +9,7 @@ public static partial class FileExtensions
     /// <returns>The number of lines in the file.</returns>
     public static int CountLines(this FileInfo file)
     {
-        int lineCount = 0;
+        var lineCount = 0;
         using (var reader = file.OpenText())
         {
             while (reader.ReadLine() != null)

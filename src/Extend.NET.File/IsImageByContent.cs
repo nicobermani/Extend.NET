@@ -9,8 +9,8 @@ public static partial class FileExtensions
     /// <returns>True if the file is an image, false otherwise.</returns>
     public static bool IsImageByContent(this FileInfo file)
     {
-        byte[] fileBytes = new byte[8];
-        using (FileStream fs = file.OpenRead())
+        var fileBytes = new byte[8];
+        using (var fs = file.OpenRead())
         {
             fs.Read(fileBytes, 0, 8);
         }

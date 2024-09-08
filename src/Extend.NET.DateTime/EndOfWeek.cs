@@ -10,7 +10,7 @@ public static partial class DateTimeExtensions
     /// <returns>A new DateTime representing the last day of the week.</returns>
     public static System.DateTime EndOfWeek(this System.DateTime date, DayOfWeek endOfWeek = DayOfWeek.Saturday)
     {
-        int diff = (7 + (endOfWeek - date.DayOfWeek)) % 7;
+        var diff = (7 + (endOfWeek - date.DayOfWeek)) % 7;
         return date.AddDays(diff).Date;
     }
 }

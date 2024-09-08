@@ -11,7 +11,7 @@ namespace Extend.NET.String
         /// <returns>A new string with the last occurrence of oldValue replaced by newValue.</returns>
         public static string ReplaceLast(this string @this, string oldValue, string newValue)
         {
-            int index = @this.LastIndexOf(oldValue);
+            var index = @this.LastIndexOf(oldValue);
             if (index < 0)
                 return @this;
 

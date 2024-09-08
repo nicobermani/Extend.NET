@@ -10,11 +10,11 @@ public static partial class NlpExtensions
     public static double CalculateTextComplexity(this string text)
     {
         var sentences = text.ExtractSentences();
-        var words = text.Split(new[] { ' ', '\t', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
+        var words = text.Split(new[] {' ', '\t', '\n', '\r'}, StringSplitOptions.RemoveEmptyEntries);
 
-        double avgWordLength = words.Average(w => w.Length);
-        double avgSentenceLength = words.Length / (double)sentences.Count;
+        var avgWordLength = words.Average(w => w.Length);
+        var avgSentenceLength = words.Length / (double) sentences.Count;
 
-        return (avgWordLength * 0.5) + (avgSentenceLength * 0.5);
+        return avgWordLength * 0.5 + avgSentenceLength * 0.5;
     }
 }

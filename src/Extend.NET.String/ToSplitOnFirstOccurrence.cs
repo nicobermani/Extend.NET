@@ -10,7 +10,7 @@ namespace Extend.NET.String
         /// <returns>An array containing the two parts of the split string.</returns>
         public static string[] ToSplitOnFirstOccurrence(this string @this, string separator)
         {
-            int separatorIndex = @this.IndexOf(separator);
+            var separatorIndex = @this.IndexOf(separator);
             if (separatorIndex == -1)
                 return new[] { @this };
 

@@ -13,8 +13,8 @@ public static partial class NlpExtensions
         var set1 = new HashSet<string>(text1.ToLower().Split());
         var set2 = new HashSet<string>(text2.ToLower().Split());
 
-        int intersectionCount = set1.Intersect(set2).Count();
-        int unionCount = set1.Union(set2).Count();
+        var intersectionCount = set1.Intersect(set2).Count();
+        var unionCount = set1.Union(set2).Count();
 
         return (double)intersectionCount / unionCount;
     }

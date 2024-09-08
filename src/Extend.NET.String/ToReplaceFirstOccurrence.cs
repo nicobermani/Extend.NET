@@ -11,7 +11,7 @@ namespace Extend.NET.String
         /// <returns>A new string with the first occurrence of oldValue replaced by newValue.</returns>
         public static string ToReplaceFirstOccurrence(this string @this, string oldValue, string newValue)
         {
-            int index = @this.IndexOf(oldValue);
+            var index = @this.IndexOf(oldValue);
             if (index == -1)
                 return @this;
 

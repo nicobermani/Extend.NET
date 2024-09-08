@@ -14,7 +14,7 @@ public static partial class FileExtensions
         using (var md5 = MD5.Create())
         using (var stream = file.OpenRead())
         {
-            byte[] hash = md5.ComputeHash(stream);
+            var hash = md5.ComputeHash(stream);
             return BitConverter.ToString(hash).Replace("-", "").ToLowerInvariant();
         }
     }

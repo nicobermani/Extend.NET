@@ -13,9 +13,9 @@ public static partial class NlpExtensions
         var words = text.Split(new[] { ' ', '\t', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
         var colocations = new Dictionary<string, int>();
 
-        for (int i = 0; i < words.Length - 1; i++)
+        for (var i = 0; i < words.Length - 1; i++)
         {
-            string collocation = $"{words[i].ToLower()} {words[i + 1].ToLower()}";
+            var collocation = $"{words[i].ToLower()} {words[i + 1].ToLower()}";
             if (colocations.ContainsKey(collocation))
                 colocations[collocation]++;
             else

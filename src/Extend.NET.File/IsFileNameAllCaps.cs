@@ -9,7 +9,7 @@ public static partial class FileExtensions
     /// <returns>True if the file name is all uppercase, false otherwise.</returns>
     public static bool IsFileNameAllCaps(this FileInfo file)
     {
-        string fileName = Path.GetFileNameWithoutExtension(file.Name);
+        var fileName = Path.GetFileNameWithoutExtension(file.Name);
         return fileName.All(char.IsUpper);
     }
 }

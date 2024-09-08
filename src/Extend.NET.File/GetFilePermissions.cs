@@ -12,14 +12,13 @@ public static partial class FileExtensions
     /// <returns>A string representation of the file permissions.</returns>
     public static string GetFilePermissions(this FileInfo file)
     {
-        FileSecurity fileSecurity = file.GetAccessControl();
-        AuthorizationRuleCollection rules = fileSecurity.GetAccessRules(true, true, typeof(System.Security.Principal.NTAccount));
-        
-        StringBuilder permissions = new StringBuilder();
+        var fileSecurity = file.GetAccessControl();
+        var rules = fileSecurity.GetAccessRules(true, true, typeof(System.Security.Principal.NTAccount));
+
+        var permissions = new StringBuilder();
         foreach (FileSystemAccessRule rule in rules)
-        {
-            permissions.AppendLine($"Account: {rule.IdentityReference.Value}, Access: {rule.FileSystemRights}, Type: {rule.AccessControlType}");
-        }
+            permissions.AppendLine(
+                $"Account: {rule.IdentityReference.Value}, Access: {rule.FileSystemRights}, Type: {rule.AccessControlType}");
         return permissions.ToString();
     }
 }

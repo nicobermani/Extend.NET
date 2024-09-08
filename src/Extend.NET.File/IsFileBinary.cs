@@ -11,7 +11,7 @@ public static partial class FileExtensions
     {
         const int requiredConsecutiveNul = 1;
         const int charsToCheck = 8000;
-        int nulCount = 0;
+        var nulCount = 0;
 
         using (var stream = file.OpenRead())
         {

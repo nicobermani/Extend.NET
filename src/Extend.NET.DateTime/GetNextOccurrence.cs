@@ -10,7 +10,7 @@ public static partial class DateTimeExtensions
     /// <returns>A new DateTime representing the next occurrence of the specified day of the week.</returns>
     public static System.DateTime GetNextOccurrence(this System.DateTime date, DayOfWeek dayOfWeek)
     {
-        int daysToAdd = ((int)dayOfWeek - (int)date.DayOfWeek + 7) % 7;
+        var daysToAdd = ((int) dayOfWeek - (int) date.DayOfWeek + 7) % 7;
         return date.AddDays(daysToAdd == 0 ? 7 : daysToAdd);
     }
 }

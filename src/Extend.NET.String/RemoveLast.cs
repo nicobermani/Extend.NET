@@ -10,7 +10,7 @@ namespace Extend.NET.String
         /// <returns>A new string with the last occurrence of the specified string removed.</returns>
         public static string RemoveLast(this string @this, string removeString)
         {
-            int index = @this.LastIndexOf(removeString);
+            var index = @this.LastIndexOf(removeString);
             return index < 0 ? @this : @this.Remove(index, removeString.Length);
         }
     }

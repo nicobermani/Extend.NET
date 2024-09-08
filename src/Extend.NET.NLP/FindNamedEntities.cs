@@ -15,8 +15,7 @@ public static partial class NlpExtensions
         var words = text.Split();
         var capitalizedWordPattern = new Regex(@"^[A-Z][a-z]+$");
 
-        for (int i = 0; i < words.Length; i++)
-        {
+        for (var i = 0; i < words.Length; i++)
             if (capitalizedWordPattern.IsMatch(words[i]))
             {
                 var entity = words[i];
@@ -25,9 +24,9 @@ public static partial class NlpExtensions
                     entity += " " + words[i + 1];
                     i++;
                 }
+
                 entities.Add(entity);
             }
-        }
 
         return entities;
     }

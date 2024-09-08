@@ -15,7 +15,7 @@ namespace Extend.NET.String
             if (string.IsNullOrEmpty(@this)) return @this;
             if (unmaskedStart + unmaskedEnd >= @this.Length) return @this;
 
-            string maskedPart = new string(maskChar, @this.Length - unmaskedStart - unmaskedEnd);
+            var maskedPart = new string(maskChar, @this.Length - unmaskedStart - unmaskedEnd);
             return @this.Substring(0, unmaskedStart) + maskedPart + @this.Substring(@this.Length - unmaskedEnd);
         }
     }

@@ -11,10 +11,10 @@ public static partial class FileExtensions
     /// <returns>The file name without invalid characters and spaces, in lowercase.</returns>
     public static string GetFileNameWithoutInvalidCharsAndSpacesLowerCase(this FileInfo file)
     {
-        string invalidChars = Regex.Escape(new string(Path.GetInvalidFileNameChars()));
-        string invalidRegStr = string.Format(@"([{0}]*\.+$)|([{0}]+)", invalidChars);
-        string fileNameWithoutInvalidChars = Regex.Replace(file.Name, invalidRegStr, "_");
-        string fileNameWithoutSpaces = Regex.Replace(fileNameWithoutInvalidChars, @"\s+", "");
+        var invalidChars = Regex.Escape(new string(Path.GetInvalidFileNameChars()));
+        var invalidRegStr = string.Format(@"([{0}]*\.+$)|([{0}]+)", invalidChars);
+        var fileNameWithoutInvalidChars = Regex.Replace(file.Name, invalidRegStr, "_");
+        var fileNameWithoutSpaces = Regex.Replace(fileNameWithoutInvalidChars, @"\s+", "");
         return fileNameWithoutSpaces.ToLower();
     }
 }

@@ -15,7 +15,7 @@ namespace Extend.NET.String
             if (@this.Length >= totalWidth)
                 return @this;
 
-            string padding = new string(paddingChar, totalWidth - @this.Length);
+            var padding = new string(paddingChar, totalWidth - @this.Length);
             return padLeft ? padding + @this : @this + padding;
         }
     }

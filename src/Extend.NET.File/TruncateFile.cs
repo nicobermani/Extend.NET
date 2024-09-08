@@ -9,7 +9,7 @@ public static partial class FileExtensions
     /// <param name="length">The length to truncate the file to.</param>
     public static void TruncateFile(this FileInfo file, long length)
     {
-        using (FileStream stream = file.Open(FileMode.Open, FileAccess.Write))
+        using (var stream = file.Open(FileMode.Open, FileAccess.Write))
         {
             stream.SetLength(length);
         }

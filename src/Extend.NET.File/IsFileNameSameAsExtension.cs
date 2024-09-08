@@ -9,8 +9,8 @@ public static partial class FileExtensions
     /// <returns>True if the file name is the same as its extension, false otherwise.</returns>
     public static bool IsFileNameSameAsExtension(this FileInfo file)
     {
-        string nameWithoutExtension = Path.GetFileNameWithoutExtension(file.Name);
-        string extensionWithoutDot = file.Extension.TrimStart('.');
+        var nameWithoutExtension = Path.GetFileNameWithoutExtension(file.Name);
+        var extensionWithoutDot = file.Extension.TrimStart('.');
         return string.Equals(nameWithoutExtension, extensionWithoutDot, StringComparison.OrdinalIgnoreCase);
     }
 }

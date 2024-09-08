@@ -16,7 +16,7 @@ namespace Extend.NET.String
 
             var lines = @this.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None);
             var sb = new StringBuilder();
-            string indent = new string(' ', indentSize);
+            var indent = new string(' ', indentSize);
 
             foreach (var line in lines)
             {

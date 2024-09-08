@@ -12,7 +12,7 @@ namespace Extend.NET.String
         /// <returns>The compressed string as a Base64-encoded string.</returns>
         public static string ToCompressed(this string @this)
         {
-            byte[] buffer = Encoding.UTF8.GetBytes(@this);
+            var buffer = Encoding.UTF8.GetBytes(@this);
             using (var memoryStream = new MemoryStream())
             {
                 using (var gZipStream = new GZipStream(memoryStream, CompressionMode.Compress, true))

@@ -11,9 +11,9 @@ public static partial class FileExtensions
     /// <returns>The file name with invalid characters and spaces removed.</returns>
     public static string GetFileNameWithoutInvalidCharsAndSpaces(this FileInfo file)
     {
-        string invalidChars = Regex.Escape(new string(Path.GetInvalidFileNameChars()));
-        string invalidRegStr = string.Format(@"([{0}]*\.+$)|([{0}]+)", invalidChars);
-        string fileNameWithoutInvalidChars = Regex.Replace(file.Name, invalidRegStr, "_");
+        var invalidChars = Regex.Escape(new string(Path.GetInvalidFileNameChars()));
+        var invalidRegStr = string.Format(@"([{0}]*\.+$)|([{0}]+)", invalidChars);
+        var fileNameWithoutInvalidChars = Regex.Replace(file.Name, invalidRegStr, "_");
         return Regex.Replace(fileNameWithoutInvalidChars, @"\s+", "");
     }
 }

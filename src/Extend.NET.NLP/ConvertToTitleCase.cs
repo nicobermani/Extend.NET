@@ -11,7 +11,7 @@ public static partial class NlpExtensions
     /// <returns>The input text converted to title case.</returns>
     public static string ConvertToTitleCase(this string text)
     {
-        TextInfo textInfo = new CultureInfo("en-US", false).TextInfo;
+        var textInfo = new CultureInfo("en-US", false).TextInfo;
         return textInfo.ToTitleCase(text.ToLower());
     }
 }

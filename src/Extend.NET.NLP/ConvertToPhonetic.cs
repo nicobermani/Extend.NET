@@ -14,12 +14,12 @@ public static partial class NlpExtensions
         if (string.IsNullOrEmpty(text))
             return string.Empty;
 
-        StringBuilder result = new StringBuilder();
+        var result = new StringBuilder();
         result.Append(char.ToUpper(text[0]));
 
-        for (int i = 1; i < text.Length; i++)
+        for (var i = 1; i < text.Length; i++)
         {
-            char c = char.ToUpper(text[i]);
+            var c = char.ToUpper(text[i]);
             switch (c)
             {
                 case 'B':
