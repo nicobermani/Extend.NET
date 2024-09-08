@@ -1,4 +1,8 @@
+Use .NET Core 8.
 Each file should use partial class StringExtensions.
-Each file should have single extension method. 
+Each file should have single .net extension method. 
+Each filename should be the name of the method it contains.
 Use the `this` keyword for the first parameter to make it an extension method.
 Add XML documentation comments for the method, describing its purpose, parameters, and return value.
+This project contains only extension methods related to string.
+All files should be defined in root directory.
