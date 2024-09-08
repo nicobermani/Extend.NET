@@ -13,12 +13,9 @@ public static partial class NlpExtensions
     {
         var numberPattern = @"[-+]?[0-9]*\.?[0-9]+";
         var matches = Regex.Matches(text, numberPattern);
-        
+
         var numbers = new List<string>();
-        foreach (Match match in matches)
-        {
-            numbers.Add(match.Value);
-        }
+        foreach (Match match in matches) numbers.Add(match.Value);
 
         return numbers;
     }

@@ -17,15 +17,9 @@ public static partial class NlpExtensions
         var truncated = text.Substring(0, maxLength);
         var lastSpaceIndex = truncated.LastIndexOf(' ');
 
-        if (lastSpaceIndex > 0)
-        {
-            truncated = truncated.Substring(0, lastSpaceIndex);
-        }
+        if (lastSpaceIndex > 0) truncated = truncated.Substring(0, lastSpaceIndex);
 
-        if (appendEllipsis)
-        {
-            truncated += "...";
-        }
+        if (appendEllipsis) truncated += "...";
 
         return truncated;
     }

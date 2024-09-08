@@ -11,7 +11,7 @@ public static partial class FileExtensions
     {
         using (var stream = file.OpenText())
         {
-            string content = stream.ReadToEnd();
+            var content = stream.ReadToEnd();
             return string.IsNullOrWhiteSpace(content);
         }
     }

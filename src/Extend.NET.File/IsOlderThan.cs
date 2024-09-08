@@ -10,6 +10,6 @@ public static partial class FileExtensions
     /// <returns>True if the file is older than the specified timespan, false otherwise.</returns>
     public static bool IsOlderThan(this FileInfo file, TimeSpan timeSpan)
     {
-        return (DateTime.Now - file.LastWriteTime) > timeSpan;
+        return DateTime.Now - file.LastWriteTime > timeSpan;
     }
 }

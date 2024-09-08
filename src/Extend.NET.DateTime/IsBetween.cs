@@ -10,7 +10,8 @@ public static partial class DateTimeExtensions
     /// <param name="endDate">The end date of the range.</param>
     /// <param name="inclusive">If true, the comparison is inclusive; otherwise, it's exclusive.</param>
     /// <returns>True if the date is within the specified range; otherwise, false.</returns>
-    public static bool IsBetween(this System.DateTime date, System.DateTime startDate, System.DateTime endDate, bool inclusive = true)
+    public static bool IsBetween(this System.DateTime date, System.DateTime startDate, System.DateTime endDate,
+        bool inclusive = true)
     {
         return inclusive
             ? date >= startDate && date <= endDate

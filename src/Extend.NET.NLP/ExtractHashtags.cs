@@ -13,12 +13,9 @@ public static partial class NlpExtensions
     {
         var hashtagPattern = @"#\w+";
         var matches = Regex.Matches(text, hashtagPattern);
-        
+
         var hashtags = new List<string>();
-        foreach (Match match in matches)
-        {
-            hashtags.Add(match.Value);
-        }
+        foreach (Match match in matches) hashtags.Add(match.Value);
 
         return hashtags;
     }

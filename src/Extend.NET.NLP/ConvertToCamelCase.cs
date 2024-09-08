@@ -16,14 +16,11 @@ public static partial class NlpExtensions
 
         text = Regex.Replace(text, @"[^a-zA-Z0-9]+", " ");
         text = text.Trim();
-        
-        var words = text.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+
+        var words = text.Split(new[] {' '}, StringSplitOptions.RemoveEmptyEntries);
         var result = words[0].ToLower();
 
-        for (int i = 1; i < words.Length; i++)
-        {
-            result += char.ToUpper(words[i][0]) + words[i].Substring(1).ToLower();
-        }
+        for (var i = 1; i < words.Length; i++) result += char.ToUpper(words[i][0]) + words[i].Substring(1).ToLower();
 
         return result;
     }

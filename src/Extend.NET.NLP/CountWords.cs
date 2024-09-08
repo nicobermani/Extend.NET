@@ -12,6 +12,6 @@ public static partial class NlpExtensions
         if (string.IsNullOrWhiteSpace(text))
             return 0;
 
-        return text.Split(new[] { ' ', '\t', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries).Length;
+        return text.Split(new[] {' ', '\t', '\n', '\r'}, StringSplitOptions.RemoveEmptyEntries).Length;
     }
 }

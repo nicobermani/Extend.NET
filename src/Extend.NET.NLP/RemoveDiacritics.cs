@@ -18,10 +18,7 @@ public static partial class NlpExtensions
         foreach (var c in normalizedString)
         {
             var unicodeCategory = CharUnicodeInfo.GetUnicodeCategory(c);
-            if (unicodeCategory != UnicodeCategory.NonSpacingMark)
-            {
-                stringBuilder.Append(c);
-            }
+            if (unicodeCategory != UnicodeCategory.NonSpacingMark) stringBuilder.Append(c);
         }
 
         return stringBuilder.ToString().Normalize(NormalizationForm.FormC);

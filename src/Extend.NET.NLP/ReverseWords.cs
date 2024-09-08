@@ -12,7 +12,7 @@ public static partial class NlpExtensions
         if (string.IsNullOrWhiteSpace(text))
             return text;
 
-        var words = text.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+        var words = text.Split(new[] {' '}, StringSplitOptions.RemoveEmptyEntries);
         return string.Join(" ", words.Reverse());
     }
 }

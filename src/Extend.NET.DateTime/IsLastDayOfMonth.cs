@@ -9,6 +9,7 @@ public static partial class DateTimeExtensions
     /// <returns>True if the date is the last day of the month; otherwise, false.</returns>
     public static bool IsLastDayOfMonth(this System.DateTime date)
     {
-        return date.Date == new System.DateTime(date.Year, date.Month, System.DateTime.DaysInMonth(date.Year, date.Month));
+        return date.Date ==
+               new System.DateTime(date.Year, date.Month, System.DateTime.DaysInMonth(date.Year, date.Month));
     }
 }
