@@ -1,0 +1,10 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>Extend.NET.Enum</PackageId>
+    <Title>Extend.NET.Enum</Title>
+    <PackageDescription>Enum-related extension methods and helpers for .NET</PackageDescription>
+    <RootNamespace>Extend.NET.Enum</RootNamespace>
+  </PropertyGroup>
+
+</Project>

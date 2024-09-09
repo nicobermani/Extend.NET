@@ -1,0 +1,10 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+   <PackageId>Extend.NET.Regex</PackageId>
+    <Title>Extend.NET.Regex</Title>
+    <PackageDescription>Regex-related extension methods and helpers for .NET</PackageDescription>
+    <RootNamespace>Extend.NET.Regex</RootNamespace>
+  </PropertyGroup>
+
+</Project>
