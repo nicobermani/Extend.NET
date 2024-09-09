@@ -29,9 +29,9 @@
     <None Include="$(MSBuildThisFileDirectory)../icon.png" Pack="true" PackagePath="\" Visible="true" />
   </ItemGroup>
 
-  <ItemGroup>
+  <!-- <ItemGroup>
   <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All"/>
-</ItemGroup>
+</ItemGroup> -->
 
   <Target Name="UpdatePackageReadme" AfterTargets="Build">
     <Message Text="Updating README for $(MSBuildProjectName)" Importance="high" />

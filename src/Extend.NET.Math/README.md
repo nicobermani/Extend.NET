@@ -1,6 +1,6 @@
 # Extend.NET.Math
 
-Last Updated: 2024-09-09 18:48:57
+Last Updated: 2024-09-09 19:09:35
 
 ## 📖 Overview
 
