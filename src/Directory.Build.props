@@ -19,6 +19,7 @@
 
   <Target Name="UpdatePackageReadme" AfterTargets="Build">
     <Message Text="Updating README for $(MSBuildProjectName)" Importance="high" />
-    <Exec Command="powershell.exe -ExecutionPolicy Bypass -NoProfile -File &quot;$(MSBuildThisFileDirectory)UpdateExtensionMethodsLog.ps1&quot; -projectDir &quot;$(MSBuildProjectDirectory)&quot; -logFile &quot;$(MSBuildProjectDirectory)\README.md&quot;" />
+    <Exec Command="pwsh -ExecutionPolicy Bypass -NoProfile -File &quot;$(MSBuildThisFileDirectory)UpdateExtensionMethodsLog.ps1&quot; -projectDir &quot;$(MSBuildProjectDirectory)&quot; -logFile &quot;$(MSBuildProjectDirectory)/README.md&quot;" Condition="$([MSBuild]::IsOSPlatform('Linux'))" />
+    <Exec Command="powershell.exe -ExecutionPolicy Bypass -NoProfile -File &quot;$(MSBuildThisFileDirectory)UpdateExtensionMethodsLog.ps1&quot; -projectDir &quot;$(MSBuildProjectDirectory)&quot; -logFile &quot;$(MSBuildProjectDirectory)\README.md&quot;" Condition="$([MSBuild]::IsOSPlatform('Windows'))" />
   </Target>
 </Project>
