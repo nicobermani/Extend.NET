@@ -11,7 +11,7 @@ public static partial class RegexExtensions
     /// <returns>An array of tuples containing the link text and URL for each Markdown link found.</returns>
     public static (string Text, string Url)[] ExtractMarkdownLinks(this string input)
     {
-        string pattern = @"\[([^\]]+)\]\(([^\)]+)\)";
+        var pattern = @"\[([^\]]+)\]\(([^\)]+)\)";
         return System.Text.RegularExpressions.Regex.Matches(input, pattern)
             .Cast<Match>()
             .Select(m => (m.Groups[1].Value, m.Groups[2].Value))

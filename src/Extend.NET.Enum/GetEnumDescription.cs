@@ -12,8 +12,8 @@ public static partial class EnumExtensions
     /// <returns>The description of the enum value if it has a DescriptionAttribute, otherwise the enum value's name.</returns>
     public static string GetEnumDescription(this System.Enum value)
     {
-        FieldInfo field = value.GetType().GetField(value.ToString());
-        DescriptionAttribute attribute = field.GetCustomAttribute<DescriptionAttribute>();
+        var field = value.GetType().GetField(value.ToString());
+        var attribute = field.GetCustomAttribute<DescriptionAttribute>();
         return attribute?.Description ?? value.ToString();
     }
 }

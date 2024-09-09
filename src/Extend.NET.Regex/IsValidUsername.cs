@@ -11,7 +11,7 @@ public static partial class RegexExtensions
     /// <returns>True if the input is a valid username; otherwise, false.</returns>
     public static bool IsValidUsername(this string input)
     {
-        string pattern = @"^[a-zA-Z0-9_-]{3,20}$";
+        var pattern = @"^[a-zA-Z0-9_-]{3,20}$";
         return System.Text.RegularExpressions.Regex.IsMatch(input, pattern);
     }
 }

@@ -13,8 +13,8 @@ namespace Extend.NET.Enum
         public static IEnumerable<int> GetEnumValuesBetweenAsInt<T>(this Type enumType, T start, T end)
             where T : struct, System.Enum
         {
-            int startValue = Convert.ToInt32(start);
-            int endValue = Convert.ToInt32(end);
+            var startValue = Convert.ToInt32(start);
+            var endValue = Convert.ToInt32(end);
             return System.Enum.GetValues(typeof(T))
                 .Cast<T>()
                 .Select(v => Convert.ToInt32(v))

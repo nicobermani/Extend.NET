@@ -11,7 +11,7 @@ namespace Extend.NET.Enum
         public static T GetNextDistinctValue<T>(this T value) where T : struct, System.Enum
         {
             var values = System.Enum.GetValues(typeof(T)).Cast<T>().Distinct().ToList();
-            int index = values.IndexOf(value);
+            var index = values.IndexOf(value);
             return index < values.Count - 1 ? values[index + 1] : values[0];
         }
     }

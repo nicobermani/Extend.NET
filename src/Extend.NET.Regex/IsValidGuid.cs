@@ -9,7 +9,7 @@ public static partial class RegexExtensions
     /// <returns>True if the input is a valid GUID; otherwise, false.</returns>
     public static bool IsValidGuid(this string input)
     {
-        string pattern = @"^[{]?[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}[}]?$";
+        var pattern = @"^[{]?[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}[}]?$";
         return System.Text.RegularExpressions.Regex.IsMatch(input, pattern);
     }
 }

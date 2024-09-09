@@ -12,7 +12,7 @@ namespace Extend.NET.Dictionary
         /// <returns>The number of elements successfully removed from the dictionary.</returns>
         public static int TryRemoveRange<TKey, TValue>(this IDictionary<TKey, TValue> dictionary, IEnumerable<TKey> keys)
         {
-            int removedCount = 0;
+            var removedCount = 0;
             foreach (var key in keys)
             {
                 if (dictionary.Remove(key))

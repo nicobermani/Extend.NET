@@ -35,7 +35,7 @@ namespace Extend.NET.Dictionary
             var keySerializer = new System.Xml.Serialization.XmlSerializer(typeof(TKey));
             var valueSerializer = new System.Xml.Serialization.XmlSerializer(typeof(TValue));
 
-            bool wasEmpty = reader.IsEmptyElement;
+            var wasEmpty = reader.IsEmptyElement;
             reader.Read();
 
             if (wasEmpty)
@@ -46,11 +46,11 @@ namespace Extend.NET.Dictionary
                 reader.ReadStartElement("item");
 
                 reader.ReadStartElement("key");
-                TKey key = (TKey)keySerializer.Deserialize(reader);
+                var key = (TKey) keySerializer.Deserialize(reader);
                 reader.ReadEndElement();
 
                 reader.ReadStartElement("value");
-                TValue value = (TValue)valueSerializer.Deserialize(reader);
+                var value = (TValue) valueSerializer.Deserialize(reader);
                 reader.ReadEndElement();
 
                 this.Add(key, value);
@@ -66,7 +66,7 @@ namespace Extend.NET.Dictionary
             var keySerializer = new System.Xml.Serialization.XmlSerializer(typeof(TKey));
             var valueSerializer = new System.Xml.Serialization.XmlSerializer(typeof(TValue));
 
-            foreach (TKey key in this.Keys)
+            foreach (var key in Keys)
             {
                 writer.WriteStartElement("item");
 
@@ -75,7 +75,7 @@ namespace Extend.NET.Dictionary
                 writer.WriteEndElement();
 
                 writer.WriteStartElement("value");
-                TValue value = this[key];
+                var value = this[key];
                 valueSerializer.Serialize(writer, value);
                 writer.WriteEndElement();
 

@@ -13,7 +13,7 @@ namespace Extend.NET.String
             if (string.IsNullOrEmpty(@this) || @this.Length <= maxLength)
                 return @this;
 
-            string[] words = @this.Split(' ');
+            var words = @this.Split(' ');
             return string.Join("", words.Select(w => w[0])).Substring(0, Math.Min(maxLength, words.Length));
         }
     }

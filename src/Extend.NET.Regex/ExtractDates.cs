@@ -12,7 +12,8 @@ public static partial class RegexExtensions
     /// <returns>An array of strings containing all dates found in the input.</returns>
     public static string[] ExtractDates(this string input)
     {
-        string pattern = @"\b(?:(?:0?[1-9]|1[0-2])[/\-](?:0?[1-9]|[12]\d|3[01])[/\-](?:19|20)\d{2}|(?:19|20)\d{2}[/\-](?:0?[1-9]|1[0-2])[/\-](?:0?[1-9]|[12]\d|3[01]))\b";
+        var pattern =
+            @"\b(?:(?:0?[1-9]|1[0-2])[/\-](?:0?[1-9]|[12]\d|3[01])[/\-](?:19|20)\d{2}|(?:19|20)\d{2}[/\-](?:0?[1-9]|1[0-2])[/\-](?:0?[1-9]|[12]\d|3[01]))\b";
         return System.Text.RegularExpressions.Regex.Matches(input, pattern)
             .Cast<Match>()
             .Select(m => m.Value)

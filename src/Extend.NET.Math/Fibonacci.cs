@@ -17,9 +17,9 @@ public static partial class MathExtensions
             return n;
 
         long a = 0, b = 1;
-        for (int i = 2; i <= n; i++)
+        for (var i = 2; i <= n; i++)
         {
-            long temp = a + b;
+            var temp = a + b;
             a = b;
             b = temp;
         }

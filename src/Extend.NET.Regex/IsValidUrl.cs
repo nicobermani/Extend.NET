@@ -11,7 +11,7 @@ public static partial class RegexExtensions
     /// <returns>True if the input is a valid URL; otherwise, false.</returns>
     public static bool IsValidUrl(this string input)
     {
-        string pattern = @"^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$";
+        var pattern = @"^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$";
         return System.Text.RegularExpressions.Regex.IsMatch(input, pattern, RegexOptions.IgnoreCase);
     }
 }

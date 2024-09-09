@@ -11,7 +11,7 @@ public static partial class RegexExtensions
     /// <returns>True if the input is a strong password; otherwise, false.</returns>
     public static bool IsStrongPassword(this string input)
     {
-        string pattern = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,}$";
+        var pattern = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,}$";
         return System.Text.RegularExpressions.Regex.IsMatch(input, pattern);
     }
 }

@@ -13,12 +13,9 @@ public static partial class RegexExtensions
         if (string.IsNullOrEmpty(input))
             return input;
 
-        string[] words = input.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-        string result = words[0].ToLower();
-        for (int i = 1; i < words.Length; i++)
-        {
-            result += char.ToUpper(words[i][0]) + words[i].Substring(1).ToLower();
-        }
+        var words = input.Split(new[] {' '}, StringSplitOptions.RemoveEmptyEntries);
+        var result = words[0].ToLower();
+        for (var i = 1; i < words.Length; i++) result += char.ToUpper(words[i][0]) + words[i].Substring(1).ToLower();
 
         return result;
     }

@@ -13,7 +13,7 @@ namespace Extend.NET.String
             if (string.IsNullOrEmpty(@this) || lineLength <= 0)
                 return new string[] { @this };
 
-            List<string> lines = new List<string>();
+            var lines = new List<string>();
             var currentPosition = 0;
 
             while (currentPosition < @this.Length)

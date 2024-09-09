@@ -13,7 +13,7 @@ public static partial class DictionaryExtensions
     /// <returns>True if the key was successfully renamed; otherwise, false.</returns>
     public static bool RenameKey<TKey, TValue>(this IDictionary<TKey, TValue> dictionary, TKey oldKey, TKey newKey)
     {
-        if (!dictionary.TryGetValue(oldKey, out TValue value))
+        if (!dictionary.TryGetValue(oldKey, out var value))
             return false;
 
         dictionary.Remove(oldKey);

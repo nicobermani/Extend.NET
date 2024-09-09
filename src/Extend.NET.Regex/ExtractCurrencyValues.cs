@@ -12,7 +12,7 @@ public static partial class RegexExtensions
     /// <returns>An array of strings containing all currency values found in the input.</returns>
     public static string[] ExtractCurrencyValues(this string input)
     {
-        string pattern = @"[$€£¥]?\d+(?:\.\d{2})?";
+        var pattern = @"[$€£¥]?\d+(?:\.\d{2})?";
         return System.Text.RegularExpressions.Regex.Matches(input, pattern)
             .Cast<Match>()
             .Select(m => m.Value)

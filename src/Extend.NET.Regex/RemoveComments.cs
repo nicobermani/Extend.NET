@@ -9,7 +9,7 @@ public static partial class RegexExtensions
     /// <returns>A new string with all C-style comments removed.</returns>
     public static string RemoveComments(this string input)
     {
-        string pattern = @"(/\*([^*]|[\r\n]|(\*+([^*/]|[\r\n])))*\*+/)|(//.*)|(//.*)";
+        var pattern = @"(/\*([^*]|[\r\n]|(\*+([^*/]|[\r\n])))*\*+/)|(//.*)|(//.*)";
         return System.Text.RegularExpressions.Regex.Replace(input, pattern, string.Empty);
     }
 }

@@ -11,7 +11,7 @@ public static partial class RegexExtensions
     /// <returns>An array of strings containing all XML tags found in the input.</returns>
     public static string[] ExtractXmlTags(this string input)
     {
-        string pattern = @"<\/?[\w\s=\""'-]+\/?>";
+        var pattern = @"<\/?[\w\s=\""'-]+\/?>";
         return System.Text.RegularExpressions.Regex.Matches(input, pattern)
             .Cast<Match>()
             .Select(m => m.Value)

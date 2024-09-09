@@ -11,7 +11,7 @@ namespace Extend.NET.String
         /// <returns>The string converted to PascalCase.</returns>
         public static string ToPascalCase(this string @this)
         {
-            string[] words = @this.Split(new[] { '_', ' ', '-' }, StringSplitOptions.RemoveEmptyEntries);
+            var words = @this.Split(new[] {'_', ' ', '-'}, StringSplitOptions.RemoveEmptyEntries);
             return string.Join("", words.Select(word => char.ToUpper(word[0]) + word.Substring(1).ToLower()));
         }
     }

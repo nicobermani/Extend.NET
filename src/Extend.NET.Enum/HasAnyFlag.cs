@@ -11,7 +11,7 @@ namespace Extend.NET.Enum
         /// <returns>True if the enum value has any of the specified flags, false otherwise.</returns>
         public static bool HasAnyFlag<T>(this T value, params T[] flags) where T : struct, System.Enum
         {
-            long lValue = Convert.ToInt64(value);
+            var lValue = Convert.ToInt64(value);
             return flags.Any(flag => (lValue & Convert.ToInt64(flag)) != 0);
         }
     }

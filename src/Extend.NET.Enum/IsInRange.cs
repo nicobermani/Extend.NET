@@ -12,9 +12,9 @@ namespace Extend.NET.Enum
         /// <returns>True if the value is within the range, false otherwise.</returns>
         public static bool IsInRange<T>(this T value, T start, T end) where T : struct, System.Enum
         {
-            int iValue = Convert.ToInt32(value);
-            int iStart = Convert.ToInt32(start);
-            int iEnd = Convert.ToInt32(end);
+            var iValue = Convert.ToInt32(value);
+            var iStart = Convert.ToInt32(start);
+            var iEnd = Convert.ToInt32(end);
             return iValue >= iStart && iValue <= iEnd;
         }
     }

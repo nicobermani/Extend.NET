@@ -13,7 +13,7 @@ public static partial class StringExtensions
     public static string ToTitleCaseWithExceptions(this string @this, params string[] lowercaseWords)
     {
         var textInfo = CultureInfo.CurrentCulture.TextInfo;
-        string[] words = @this.Split(' ');
+        var words = @this.Split(' ');
 
         for (var i = 0; i < words.Length; i++)
             if (!lowercaseWords.Contains(words[i], StringComparer.OrdinalIgnoreCase))

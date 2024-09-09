@@ -12,7 +12,7 @@ public static partial class EnumExtensions
     /// <returns>A random value from the enum.</returns>
     public static T GetRandomValue<T>(this T value) where T : System.Enum
     {
-        T[] values = (T[]) System.Enum.GetValues(typeof(T));
+        var values = (T[]) System.Enum.GetValues(typeof(T));
         return values[_random.Next(values.Length)];
     }
 }

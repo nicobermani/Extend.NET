@@ -19,12 +19,9 @@ namespace Extend.NET.Dictionary
             Func<TKey, TValue> valueFactory,
             int maxRetries = 3)
         {
-            for (int attempt = 0; attempt < maxRetries; attempt++)
+            for (var attempt = 0; attempt < maxRetries; attempt++)
             {
-                if (dictionary.TryGetValue(key, out var existingValue))
-                {
-                    return existingValue;
-                }
+                if (dictionary.TryGetValue(key, out var existingValue)) return existingValue;
 
                 var newValue = valueFactory(key);
 
@@ -37,10 +34,8 @@ namespace Extend.NET.Dictionary
                 {
                     // Key was added by another thread, retry
                     if (attempt == maxRetries - 1)
-                    {
                         // Last attempt, just return whatever is there now
                         return dictionary[key];
-                    }
                 }
             }
 

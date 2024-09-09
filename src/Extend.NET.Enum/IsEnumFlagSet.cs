@@ -11,7 +11,7 @@ public static partial class EnumExtensions
     /// <returns>True if the flag is set, otherwise false.</returns>
     public static bool IsEnumFlagSet<T>(this T value, T flag) where T : System.Enum
     {
-        long flagValue = Convert.ToInt64(flag);
+        var flagValue = Convert.ToInt64(flag);
         return (Convert.ToInt64(value) & flagValue) == flagValue;
     }
 }

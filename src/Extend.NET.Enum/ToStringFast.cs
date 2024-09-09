@@ -16,7 +16,7 @@ public static partial class EnumExtensions
     {
         return _enumStringCache.GetOrAdd(value, enumValue =>
         {
-            FieldInfo fi = enumValue.GetType().GetField(enumValue.ToString());
+            var fi = enumValue.GetType().GetField(enumValue.ToString());
             return fi.Name;
         });
     }

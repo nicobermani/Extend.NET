@@ -11,7 +11,7 @@ public static partial class RegexExtensions
     /// <returns>An array of strings containing all time values found in the input.</returns>
     public static string[] ExtractTimeFromString(this string input)
     {
-        string pattern = @"\b(?:[01]\d|2[0-3]):[0-5]\d(?::[0-5]\d)?\b";
+        var pattern = @"\b(?:[01]\d|2[0-3]):[0-5]\d(?::[0-5]\d)?\b";
         return System.Text.RegularExpressions.Regex.Matches(input, pattern)
             .Cast<Match>()
             .Select(m => m.Value)

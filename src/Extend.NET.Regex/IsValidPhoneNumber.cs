@@ -9,7 +9,7 @@ public static partial class RegexExtensions
     /// <returns>True if the input is a valid phone number; otherwise, false.</returns>
     public static bool IsValidPhoneNumber(this string input)
     {
-        string pattern = @"^\+?(\d{1,3})?[\s.-]?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$";
+        var pattern = @"^\+?(\d{1,3})?[\s.-]?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$";
         return System.Text.RegularExpressions.Regex.IsMatch(input, pattern);
     }
 }
