@@ -1,6 +1,6 @@
 # Extend.NET.String
 
-Last Updated: 2024-09-09 17:49:37
+Last Updated: 2024-09-09 18:48:59
 
 ## 📖 Overview
 

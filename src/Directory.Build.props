@@ -1,12 +1,14 @@
 <Project>
   <PropertyGroup>
-   <TargetFramework>net8.0</TargetFramework>
+   <TargetFrameworks>net8.0</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>Nicober Mani</Authors>
+    <Company>Extend.NET</Company>
     <AnalysisLevel>latest</AnalysisLevel>
-    <Description>Collection of Many Useful Reusable Methods for .NET Engineers</Description>
+    <Description>Collection of .NET Extension Methods</Description>
     <PackageTags>nicober;reusable;extension;extensions;helper;.net;core</PackageTags>
     <RepositoryUrl>https://github.com/nicobermani/Extend.NET</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
@@ -14,8 +16,22 @@
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>icon.png</PackageIcon>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <!-- <DebugType>embedded</DebugType> -->
+    <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
   </PropertyGroup>
+
+   <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\"/>
+    <None Include="$(MSBuildThisFileDirectory)../icon.png" Pack="true" PackagePath="\" Visible="true" />
+  </ItemGroup>
+
+  <ItemGroup>
+  <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All"/>
+</ItemGroup>
 
   <Target Name="UpdatePackageReadme" AfterTargets="Build">
     <Message Text="Updating README for $(MSBuildProjectName)" Importance="high" />

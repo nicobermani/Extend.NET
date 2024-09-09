@@ -1,6 +1,6 @@
 # Extend.NET.Regex
 
-Last Updated: 2024-09-09 17:49:35
+Last Updated: 2024-09-09 18:48:58
 
 ## 📖 Overview
 
