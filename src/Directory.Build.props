@@ -16,4 +16,9 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     
   </PropertyGroup>
+
+  <Target Name="UpdatePackageReadme" AfterTargets="Build">
+    <Message Text="Updating README for $(MSBuildProjectName)" Importance="high" />
+    <Exec Command="powershell.exe -ExecutionPolicy Bypass -NoProfile -File &quot;$(MSBuildThisFileDirectory)UpdateExtensionMethodsLog.ps1&quot; -projectDir &quot;$(MSBuildProjectDirectory)&quot; -logFile &quot;$(MSBuildProjectDirectory)\README.md&quot;" />
+  </Target>
 </Project>

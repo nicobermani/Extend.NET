@@ -13,4 +13,14 @@ Here's a description of the existing project to understand the context and how t
 
 - Targets all versions of .NET.
 
+Within each project, the following rules apply:
+  This project contains only extension methods related to Math.
+  Each file should use partial class MathExtensions.
+  Each file should have single .net extension method. 
+  Each filename should be the name of the method it contains.
+  Use the `this` keyword for the first parameter to make it an extension method.
+  Add XML documentation comments for the method, describing its purpose, parameters, and return value.
+  All files should be defined in root directory.
+
+
 
