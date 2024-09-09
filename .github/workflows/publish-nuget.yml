@@ -33,6 +33,7 @@ jobs:
         dotnet pack src/Extend.NET.NLP/Extend.NET.NLP.csproj --configuration Release --no-build --output nupkgs
         dotnet pack src/Extend.NET.Math/Extend.NET.Math.csproj --configuration Release --no-build --output nupkgs
         dotnet pack src/Extend.NET.DateTime/Extend.NET.DateTime.csproj --configuration Release --no-build --output nupkgs
+        dotnet pack src/Extend.NET.Dictionary/Extend.NET.Dictionary.csproj --configuration Release --no-build --output nupkgs
 
 
     - name: Publish to NuGet

@@ -28,6 +28,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extend.NET.DateTime", "Exte
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extend.NET.NLP", "Extend.NET.NLP\Extend.NET.NLP.csproj", "{210ED1AF-5EBD-4047-8E56-1B913710C2DC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extend.NET.Dictionary", "Extend.NET.Dictionary\Extend.NET.Dictionary.csproj", "{2EA3FB74-E94B-49A2-A90D-09E8F34347B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,6 +60,10 @@ Global
 		{210ED1AF-5EBD-4047-8E56-1B913710C2DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{210ED1AF-5EBD-4047-8E56-1B913710C2DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{210ED1AF-5EBD-4047-8E56-1B913710C2DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EA3FB74-E94B-49A2-A90D-09E8F34347B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EA3FB74-E94B-49A2-A90D-09E8F34347B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EA3FB74-E94B-49A2-A90D-09E8F34347B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EA3FB74-E94B-49A2-A90D-09E8F34347B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,6 +75,7 @@ Global
 		{C993C8E9-4482-4971-B9CE-432E4E065C05} = {2C7612AB-BE30-401D-A828-E8A4279115E9}
 		{54EB2F2D-AC87-4275-8092-0F84632074BE} = {2C7612AB-BE30-401D-A828-E8A4279115E9}
 		{210ED1AF-5EBD-4047-8E56-1B913710C2DC} = {2C7612AB-BE30-401D-A828-E8A4279115E9}
+		{2EA3FB74-E94B-49A2-A90D-09E8F34347B8} = {2C7612AB-BE30-401D-A828-E8A4279115E9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4154E67A-6296-4641-A4E8-1A6738DF369A}
