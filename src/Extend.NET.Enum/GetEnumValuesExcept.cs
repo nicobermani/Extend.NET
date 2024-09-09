@@ -9,9 +9,10 @@ namespace Extend.NET.Enum
         /// <param name="enumType">The enum type.</param>
         /// <param name="valuesToExclude">The enum values to exclude.</param>
         /// <returns>An IEnumerable of enum values, excluding the specified ones.</returns>
-        public static IEnumerable<T> GetEnumValuesExcept<T>(this Type enumType, params T[] valuesToExclude) where T : struct, Enum
+        public static IEnumerable<T> GetEnumValuesExcept<T>(this Type enumType, params T[] valuesToExclude)
+            where T : struct, System.Enum
         {
-            return Enum.GetValues(typeof(T)).Cast<T>().Except(valuesToExclude);
+            return System.Enum.GetValues(typeof(T)).Cast<T>().Except(valuesToExclude);
         }
     }
 }

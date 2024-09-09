@@ -9,7 +9,7 @@ namespace Extend.NET.Enum
         /// <param name="value">The enum value.</param>
         /// <param name="separator">The separator to use between words.</param>
         /// <returns>A string representation of the enum value with the specified separator.</returns>
-        public static string ToStringWithSeparator<T>(this T value, string separator) where T : struct, Enum
+        public static string ToStringWithSeparator<T>(this T value, string separator) where T : struct, System.Enum
         {
             return string.Join(separator, System.Text.RegularExpressions.Regex.Split(value.ToString(), @"(?<!^)(?=[A-Z])"));
         }

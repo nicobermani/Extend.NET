@@ -9,9 +9,9 @@ namespace Extend.NET.Enum
         /// <param name="enumType">The enum type.</param>
         /// <param name="name">The name of the enum value.</param>
         /// <returns>The enum value corresponding to the given name.</returns>
-        public static T GetEnumValueByName<T>(this Type enumType, string name) where T : struct, Enum
+        public static T GetEnumValueByName<T>(this Type enumType, string name) where T : struct, System.Enum
         {
-            return (T)Enum.Parse(typeof(T), name);
+            return (T) System.Enum.Parse(typeof(T), name);
         }
     }
 }

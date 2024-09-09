@@ -9,7 +9,7 @@ namespace Extend.NET.Enum
         /// <param name="value">The enum value to check.</param>
         /// <param name="flags">The flags to check for.</param>
         /// <returns>True if the enum value has any of the specified flags, false otherwise.</returns>
-        public static bool HasAnyFlag<T>(this T value, params T[] flags) where T : struct, Enum
+        public static bool HasAnyFlag<T>(this T value, params T[] flags) where T : struct, System.Enum
         {
             long lValue = Convert.ToInt64(value);
             return flags.Any(flag => (lValue & Convert.ToInt64(flag)) != 0);

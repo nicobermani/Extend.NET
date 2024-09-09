@@ -10,7 +10,7 @@ namespace Extend.NET.Enum
         /// <param name="start">The start of the range (inclusive).</param>
         /// <param name="end">The end of the range (inclusive).</param>
         /// <returns>True if the value is within the range, false otherwise.</returns>
-        public static bool IsInRange<T>(this T value, T start, T end) where T : struct, Enum
+        public static bool IsInRange<T>(this T value, T start, T end) where T : struct, System.Enum
         {
             int iValue = Convert.ToInt32(value);
             int iStart = Convert.ToInt32(start);
